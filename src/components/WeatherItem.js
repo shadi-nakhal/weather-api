@@ -3,7 +3,7 @@ import { render } from "react-dom";
 
 export default class WeatherItem extends Component {
   render() {
-    return <div>Heello</div>;
+    return <div>Hello</div>;
   }
 }
 export class SayHello extends Component {
