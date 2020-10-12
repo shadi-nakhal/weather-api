@@ -58,9 +58,9 @@ Read the Readme at least 3 times, after each reading discuss what you understood
 
 You will be connecting to a real-time weather API to make a weather app that looks like this:
 
-![final design](images/instructions/final-design.png)
+![final design](src/img/instructions/final-design.png)
 
-![designgif](images/instructions/weatherappdemo.gif)
+![designgif](src/img/instructions/weatherappdemo.gif)
 
 ### 1. Getting started: Static HTML and CSS <kbd>🔑x30</kbd>
 
@@ -107,7 +107,7 @@ This is about cutting up your one big single block of HTML and putting sections 
 
 You'll need several components - you can decide how much you want to break things up into different components, but at minimum you will need a `<Search />` component, and a `<CurrentWeather />` component (you can choose the naming you like).
 
-![wireframe](images/instructions/wireframe.png)
+![wireframe](src/img/instructions/wireframe.png)
 
 If you find yourself copy-pasting an html section multiple times with small changes, you've probably found a good candidate for a reusable React component.
 
@@ -185,7 +185,7 @@ The data will come in JSON format, and will look like this: https://samples.open
 
 **2)** Once logged in, go to the API keys tab and copy the default Key. Keep this somewhere safe as you will need it when you fetch data.
 
-![api key](images/instructions/api-key.png)
+![api key](src/img/instructions/api-key.png)
 
 **3)** The format you'll need to follow to make API calls is:
 `http://api.openweathermap.org/data/2.5/forecast?q=${CITY_NAME}&cnt=8&units=metric&appid=${YOUR_API_KEY}`
@@ -231,7 +231,7 @@ Look at the design:
 
 ### 6. Matching up the weather `id` with the appropriate icon <kbd>🔑x10</kbd>
 
-We will **not** be using the `icon` property of the data, we will only use the `id` and match it with our own svg icons. You can find these svgs in `images/weather-icons`.
+We will **not** be using the `icon` property of the data, we will only use the `id` and match it with our own svg icons. You can find these svgs in `src/img/weather-icons`.
 
 You will need to write some code to do the following:
 
@@ -265,7 +265,7 @@ What should happen if the network is down, or if someone searches for a city whi
 
 Add a new section to your app that will display the weather over the next 24 hours in the given location.
 
-![final design](images/instructions/final-design.png)
+![final design](src/img/instructions/final-design.png)
 
 **Think about how you can manipulate the data to display the weather for each 3-hour chunk...**
 
