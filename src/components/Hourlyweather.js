@@ -22,13 +22,13 @@ class Hourlyweather extends React.Component {
       return (
         <section className="hourlyweather">
             <ul className="hourlyweather__timelist">
-                <li className="hourlyweather__timelist hourlyweather__timelist--threeAM"><time>03:30</time><img src={mostlycloudy} alt="mostlycloudy icon"/>8&#176;C</li>
-                <li className="hourlyweather__timelist hourlyweather__timelist--sixAM"><time>06:00</time><img src={mostlycloudy} alt="mostlycloudy icon"/>9&#176;C</li>
-                <li className="hourlyweather__timelist hourlyweather__timelist--nineAM"><time>09:00</time><img src={clear} alt="clear icon"/>14&#176;C</li>
-                <li className="hourlyweather__timelist hourlyweather__timelist--twelvePM"><time>12:00</time><img src={clear} alt="clear icon"/>17&#176;C</li>
-                <li className="hourlyweather__timelist hourlyweather__timelist--threePM"><time>15:00</time><img src={clear} alt="clear icon"/>18&#176;C</li>
-                <li className="hourlyweather__timelist hourlyweather__timelist--sixPM"><time>18:00</time><img src={clear} alt="clear icon"/>16&#176;C</li>
-                <li className="hourlyweather__timelist hourlyweather__timelist--ninePM"><time>21:00</time><img src={mostlycloudy} alt="mostlycloudy icon"/>13&#176;C</li>
+                <li className="hourlyweather__timelist--item hourlyweather__timelist--threeAM"><time>03:30</time><img src={mostlycloudy} alt="mostlycloudy icon"/>8&#176;C</li>
+                <li className="hourlyweather__timelist--item hourlyweather__timelist--sixAM"><time>06:00</time><img src={mostlycloudy} alt="mostlycloudy icon"/>9&#176;C</li>
+                <li className="hourlyweather__timelist--item hourlyweather__timelist--nineAM"><time>09:00</time><img src={clear} alt="clear icon"/>14&#176;C</li>
+                <li className="hourlyweather__timelist--item hourlyweather__timelist--twelvePM"><time>12:00</time><img src={clear} alt="clear icon"/>17&#176;C</li>
+                <li className="hourlyweather__timelist--item hourlyweather__timelist--threePM"><time>15:00</time><img src={clear} alt="clear icon"/>18&#176;C</li>
+                <li className="hourlyweather__timelist--item hourlyweather__timelist--sixPM"><time>18:00</time><img src={clear} alt="clear icon"/>16&#176;C</li>
+                <li className="hourlyweather__timelist--item hourlyweather__timelist--ninePM"><time>21:00</time><img src={mostlycloudy} alt="mostlycloudy icon"/>13&#176;C</li>
             </ul>
         </section>
 

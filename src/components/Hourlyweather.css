@@ -1,11 +1,11 @@
-ul{
+.hourlyweather__timelist{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-left: 10%;
     margin-right: 10%;
   }
-  li{
+  .hourlyweather__timelist--item{
     list-style: none;
   }
   .app__main {
@@ -19,30 +19,15 @@ ul{
     -moz-osx-font-smoothing: grayscale;
   }
   
-  @media only screen and (max-width: 600px) {
-    .app{
-      font-size: small;
-    }
-    figure{
-      height: 5em;
-      margin:0;
-      margin-top: 2%;
-    }
-    span{
-      padding-left: 20%;
-      padding-right: 20%;
-    }
-    .current-weather{
-      margin: 0;
-    }
-    ul{
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      padding: 0;
-    }
-    li img{
-      height: 10%;
-      width: 10%;
-    }
+@media only screen and (max-width: 600px) {
+  .hourlyweather__timelist{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
   }
+  .hourlyweather__timelist--item img{
+    height: 10%;
+    width: 10%;
+  }
+}
