@@ -21,19 +21,19 @@ class Currentweather extends React.Component {
     render() {
       return (
         <section className="currentweather">
-            <figure className="currentweather__figure">
+            <figure className="currentweather currentweather__figure">
                   <img className="currentweather__figure currentweather__figure--img" src={mostlycloudy} alt="mostlycloudy icon"/>
             </figure>
-            <figcaption className="currentweather__figcaption">
-                  <span className="currentweather__figcaption currentweather__figcaption--caption-status">
+            <figcaption className="currentweather currentweather__figcaption">
+                  <span className="currentweather__figcaption currentweather__figcaption--caption currentweather__figcaption--caption-status">
                     <h1>overcast clouds</h1>
                   </span>
-                  <span className="currentweather__figcaption currentweather__figcaption--caption-temperature">
+                  <span className="currentweather__figcaption currentweather__figcaption--caption currentweather__figcaption--caption-temperature">
                     <h2>Temperature </h2> 10&#176; to 11&#176;C
-                    </span>
-                    <span className="currentweather__figcaption currentweather__figcaption--caption-humidity-pressure">
-                  <h3>Humidity </h3> 76%
-                  <h3>Pressure </h3> 10008.48
+                  </span>
+                  <span className="currentweather__figcaption currentweather__figcaption--caption currentweather__figcaption--caption-humidity-pressure">
+                    <h3>Humidity </h3> 76%
+                    <h3>Pressure </h3> 10008.48
                   </span>
             </figcaption>   
         </section>
