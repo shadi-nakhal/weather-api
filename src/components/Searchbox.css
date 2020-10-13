@@ -1,0 +1,19 @@
+.searchbox{
+    background-color: #769edb;
+    padding: 1%;
+  }
+.searchbox__input{
+    border: none;
+    background-color: inherit;
+    color: white;
+    width: 25%;
+  }
+  ::placeholder {
+    color: white;
+    font-family: "Raleway", sans-serif;
+  }
+.searchbox__button{
+    background-color: #5879c8;
+    border: none;
+    padding: 1%;
+  }

@@ -1,0 +1,23 @@
+figure{
+    height: 10em;
+    margin-top: 2%;
+  }
+  .current-weather{
+    display: flex;
+    justify-content: center;
+  }
+  figcaption{
+    display: flex;
+    flex-direction: column;
+  }
+  .status{
+    color: white;
+  }
+  span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 40%;
+    padding-right: 40%;
+  }
