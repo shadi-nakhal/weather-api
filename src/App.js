@@ -13,8 +13,6 @@ import rain from "./img/weather-icons/rain.svg";
 import snow from "./img/weather-icons/snow.svg";
 import storm from "./img/weather-icons/storm.svg";
 import unknown from "./img/weather-icons/unknown.svg";
-
-// import SayHi, { SayHello } from "./components/WeatherItem";
 import api_data from "./fakeWeatherData.json";
 
 import "./App.css";
@@ -62,7 +60,7 @@ class App extends Component {
 
     return (
       <div className="app">
-        <Searchbox />
+        <Searchbox handleInput={this.handleInputChange} />
         <Currentweather data={data} getimg={this.getimg}/>
         <Hourlyweather data={data} getimg={this.getimg}/>
       </div>

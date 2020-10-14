@@ -10,8 +10,14 @@ class Searchbox extends React.Component {
     render() {
       return (
         <header className='searchbox'>
-            <input className="searchbox__input" type="search" aria-describedby="search for a country or city weather " placeholder="Type in a city name"/>
-            <button className="searchbox__button" type="submit">Find Weather</button>
+            <input className="searchbox__input" type="search" aria-describedby="search for a country or city weather " placeholder="Type in a city name"
+            onChange={event => {
+              this.setState({ input: event.target.value });
+            }}/>
+            <button className="searchbox__button" type="submit"
+            onClick={event => {
+              this.props.handleInput(this.state.input);
+            }}>Find Weather</button>
         </header>
 
 

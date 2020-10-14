@@ -23,7 +23,6 @@ class Search extends React.Component {
             this.props.handleInput(this.state.input);
           }}
         >
-          Say Hello
         </button>
       </div>
     );
