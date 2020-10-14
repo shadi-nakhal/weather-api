@@ -14,3 +14,38 @@ body{
   }
 }
 
+
+
+.hourlyweather__timelist{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.hourlyweather__timelist--item{
+  list-style: none;
+}
+.app__main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (max-width: 600px) {
+.hourlyweather__timelist{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+}
+.hourlyweather__timelist--item img{
+  height: 10%;
+  width: 10%;
+}
+}
