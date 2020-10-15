@@ -64,18 +64,22 @@ class App extends Component {
   }
 
   getimg(id){
-    if(id <= 300){
+    if(id < 300){
       return storm
-    }if (id > 300 && id <= 499){
+    }if (id >= 300 && id <= 499){
       return drizzle;
     }if(id >= 500 && id <= 599){
       return rain
     }if(id >= 600 && id <= 699){
       return snow
+    }if(id >= 700 && id <= 799){
+      return fog;
     }if(id == 800){
-      return clear
-    }if(id >= 801 && id <= 805){
-      return mostlycloudy
+      return clear;
+    }if(id == 801){
+      return partlycloudy;
+    }if(id > 801 && id <= 805){
+      return mostlycloudy;
     } }
   getBgColor(id){
     if(id < 300){
