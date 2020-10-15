@@ -17,7 +17,8 @@ class Searchbox extends React.Component {
             <button className="searchbox__button" type="submit"
             onClick={event => {
               this.props.handleInput(this.state.input);
-            }}>Find Weather</button>
+              this.props.searchCity(this.state.input)
+            }}>Find Weather</button>{this.state.input}
         </header>
 
 

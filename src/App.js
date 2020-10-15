@@ -17,17 +17,62 @@ import api_data from "./fakeWeatherData.json";
 
 import "./App.css";
 
+const api_key = "84850b10e246e483fdf5c887d3ca53f4"
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "Shadi & Manal"
+      city: "London",
+      isLoaded: false,
+      response: {}
+
     };
   }
 
+ 
+
+
+
   handleInputChange = value => {
-    this.setState({ name: value });
+    this.setState({ city: value });
   };
+
+
+  handleErrors = response => {
+    if(!response.ok){
+      this.setState({isLoaded: false})
+    }
+  }
+
+
+  componentDidMount(){
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.city}&cnt=8&units=metric&appid=${api_key}`)
+        .then(response => response.json())
+        .then(json => {
+          this.setState({
+            isLoaded: true,
+            response: json
+          })
+        
+        })
+        
+  }
+
+  searchCity = (citty) => {
+   
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${citty}&cnt=8&units=metric&appid=${api_key}`)
+        .then(response => response.json())
+        .then(json => {
+          console.log(json, "shii")
+          this.setState({
+            isLoaded: true,
+            response: json
+          })
+
+        });
+        
+  }
 
   getimg(id){
     if(id <= 300){
@@ -40,13 +85,9 @@ class App extends Component {
       return snow
     }if(id == 800){
       return clear
-    }if(id <= 801 && id <= 805){
+    }if(id >= 801 && id <= 805){
       return mostlycloudy
-    }
-
-  }
-
-
+    } }
 
 
   render() {
@@ -56,13 +97,12 @@ class App extends Component {
   })
 
 
-  
 
     return (
       <div className="app">
-        <Searchbox handleInput={this.handleInputChange} />
-        <Currentweather data={data} getimg={this.getimg}/>
-        <Hourlyweather data={data} getimg={this.getimg}/>
+        <Searchbox handleInput={this.handleInputChange} searchCity={this.searchCity}/>
+        <Currentweather isLoaded={this.state.isLoaded} data={this.state.response} getimg={this.getimg} />
+        <Hourlyweather isLoaded={this.state.isLoaded} data={this.state.response} getimg={this.getimg}/>
       </div>
     );
   }
