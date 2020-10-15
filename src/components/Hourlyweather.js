@@ -37,12 +37,12 @@ class Hourlyweather extends React.Component {
         // let dattta = dataprop.list.forEach((element, index) => {
         //   let temp = new Date(element.dt_txt).getHours() - date;
         //   console.log(temp, "ss")
-        //   if(Math.abs(temp <= 1)){
+        //   if(temp <= 1){
         //     dataprop.list.splice(index,1);
         //   }
         // });
 
-       console.log(dataprop.list)
+       //console.log(dataprop.list)
       return (
         <section className="hourlyweather">
           <ul className="hourlyweather__timelist">

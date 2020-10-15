@@ -18,7 +18,7 @@ class Searchbox extends React.Component {
             onClick={event => {
               this.props.handleInput(this.state.input);
               this.props.searchCity(this.state.input)
-            }}>Find Weather</button>{this.state.input}
+            }}>Find Weather</button>
         </header>
 
 
