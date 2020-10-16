@@ -35,7 +35,8 @@ class Currentweather extends React.Component {
           if(Math.abs(temp) <= 1){
             return element
           }
-        });
+        })
+        
         return (
           <section className="currentweather">
               <figure className="currentweather currentweather__figure">

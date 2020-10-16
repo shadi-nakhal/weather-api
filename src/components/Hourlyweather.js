@@ -26,6 +26,7 @@ class Hourlyweather extends React.Component {
         </span>
       }
       else{
+
       return (
         <section className="hourlyweather">
           <ul className="hourlyweather__timelist">
@@ -35,7 +36,8 @@ class Hourlyweather extends React.Component {
           </ul>
         </section>
       );
-      }  
+
+      }
     }
 }
   export default Hourlyweather;
