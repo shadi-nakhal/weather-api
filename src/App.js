@@ -13,7 +13,7 @@ import rain from "./img/weather-icons/rain.svg";
 import snow from "./img/weather-icons/snow.svg";
 import storm from "./img/weather-icons/storm.svg";
 import unknown from "./img/weather-icons/unknown.svg";
-import api_data from "./fakeWeatherData.json";
+
 
 import "./App.css";
 
@@ -33,11 +33,6 @@ class App extends Component {
     this.setState({ city: value });
   };
 
-  handleErrors = response => {
-    if(!response.ok){
-      this.setState({isLoaded: false})
-    }
-  }
 
   componentDidMount(){
     fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.city}&cnt=8&units=metric&appid=${api_key}`)
@@ -55,7 +50,6 @@ class App extends Component {
     fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${citty}&cnt=8&units=metric&appid=${api_key}`)
         .then(response => response.json())
         .then(json => {
-          console.log(json, "shii")
           this.setState({
             isLoaded: true,
             response: json
@@ -138,9 +132,6 @@ class App extends Component {
 
   render() {
 
-  var  data = api_data.list.slice(5,12).map(obj => {
-      return obj
-  })
     return (
       <div className="app" backgroundColor={this.getBgColor}>
         <Searchbox backgroundColor={this.getSearchColor} handleInput={this.handleInputChange} searchCity={this.searchCity}/>
